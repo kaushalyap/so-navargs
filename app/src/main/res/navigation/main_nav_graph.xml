@@ -3,56 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/start">
+    app:startDestination="@id/fragmentMain">
 
     <fragment
-        android:id="@+id/start"
-        android:name="com.example.navargs.StartFragment"
-        android:label="Start"
-        tools:layout="@layout/fragment_start" >
+        android:id="@+id/fragmentMain"
+        android:name="com.example.navargs.MainScrFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main_scr">
 
-        <argument
-            android:name="user"
-            app:argType="com.example.navargs.User"
-            android:defaultValue="@null"
-            app:nullable="true"/>
         <action
-            android:id="@+id/action_start_to_afterFragment2"
-            app:destination="@id/afterFragment" />
-        <action
-            android:id="@+id/action_start_to_navigation"
-            app:destination="@id/login_nav_graph" />
+            android:id="@+id/action_main_to_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/afterFragment"
-        android:name="com.example.navargs.AfterFragment"
-        android:label="After"
-        tools:layout="@layout/fragment_after" />
+        android:id="@+id/deviceListFragment"
+        android:name="com.example.navargs.DeviceListFragment"
+        android:label="Device List"
+        tools:layout="@layout/fragment_device_list">
+        <action
+            android:id="@+id/action_deviceListFragment_to_pairing_nav_graph"
+            app:destination="@id/pairing_nav_graph" />
+    </fragment>
     <navigation
-        android:id="@+id/login_nav_graph"
-        app:startDestination="@id/firstFragment" >
+        android:id="@+id/pairing_nav_graph"
+        app:startDestination="@id/pairingFragment">
         <fragment
-            android:id="@+id/beforeFragment"
-            android:name="com.example.navargs.BeforeFragment"
-            android:label="Before"
-            tools:layout="@layout/fragment_before">
+            android:id="@+id/enterCodeFragment"
+            android:name="com.example.navargs.EnterCodeFragment"
+            android:label="Enter Code"
+            tools:layout="@layout/fragment_enter_code">
 
         </fragment>
-        <action
-            android:id="@+id/action_global_start"
-            app:destination="@id/start" >
-            <argument
-                android:name="user"
-                app:argType="com.example.navargs.User"/>
-        </action>
         <fragment
-            android:id="@+id/firstFragment"
-            android:name="com.example.navargs.FirstFragment"
-            android:label="First">
+            android:id="@+id/pairingFragment"
+            android:name="com.example.navargs.PairingFragment"
+            android:label="Pairing">
             <action
-                android:id="@+id/action_firstFragment_to_beforeFragment"
-                app:destination="@id/beforeFragment" />
+                android:id="@+id/action_pairingFragment_to_enterCodeFragment"
+                app:destination="@id/enterCodeFragment" />
         </fragment>
+        <action
+            android:id="@+id/action_global_deviceListFragment"
+            app:destination="@id/deviceListFragment" />
     </navigation>
 </navigation>

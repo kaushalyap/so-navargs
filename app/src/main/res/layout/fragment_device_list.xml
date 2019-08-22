@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".DeviceListFragment">
 
     <Button
-        android:id="@+id/btn_first"
+        android:id="@+id/btn_start_pairing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp"
-        android:text="First"
         android:layout_gravity="center"
-        android:textAlignment="center"/>
+        android:text="Start Pairing"
+        android:textAlignment="center"
+        android:textSize="36sp" />
 
 </FrameLayout>

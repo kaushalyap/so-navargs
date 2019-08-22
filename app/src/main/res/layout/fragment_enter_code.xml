@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BeforeFragment">
+    tools:context=".EnterCodeFragment">
 
     <Button
-        android:id="@+id/btn_before"
+        android:id="@+id/btn_done"
         android:textSize="36sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Start"
+        android:text="Code entered, Done!"
         android:textAlignment="center"
         android:layout_gravity="center"/>
 
