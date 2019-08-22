@@ -1,15 +1,13 @@
-package com.seriousfolks.navargs
+package com.example.navargs
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.navargs.R
-import kotlinx.android.synthetic.main.fragment_first.*
 
 
 class FirstFragment : Fragment() {

@@ -3,11 +3,11 @@ package com.example.navargs
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
@@ -21,7 +21,7 @@ class StartFragment : Fragment() {
         // should be taken from a persistent data source
         // Change to true for returning user flow
         //           false for first time user flow
-        var authenticated:Boolean = true
+        var authenticated: Boolean = false
     }
 
     override fun onCreateView(
