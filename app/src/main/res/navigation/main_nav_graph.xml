@@ -43,8 +43,8 @@
                 android:id="@+id/action_pairingFragment_to_enterCodeFragment"
                 app:destination="@id/enterCodeFragment" />
         </fragment>
-        <action
-            android:id="@+id/action_global_deviceListFragment"
-            app:destination="@id/deviceListFragment" />
     </navigation>
+    <action
+        android:id="@+id/action_global_deviceListFragment"
+        app:destination="@id/deviceListFragment" />
 </navigation>
