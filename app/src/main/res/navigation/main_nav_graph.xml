@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/start">
+
+    <fragment
+        android:id="@+id/start"
+        android:name="com.example.navargs.StartFragment"
+        android:label="Start"
+        tools:layout="@layout/fragment_start" >
+
+        <argument
+            android:name="user"
+            app:argType="com.example.navargs.User"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_start_to_afterFragment2"
+            app:destination="@id/afterFragment" />
+        <action
+            android:id="@+id/action_start_to_navigation"
+            app:destination="@id/login_nav_graph" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/afterFragment"
+        android:name="com.example.navargs.AfterFragment"
+        android:label="After"
+        tools:layout="@layout/fragment_after" />
+    <navigation
+        android:id="@+id/login_nav_graph"
+        app:startDestination="@id/firstFragment" >
+        <fragment
+            android:id="@+id/beforeFragment"
+            android:name="com.example.navargs.BeforeFragment"
+            android:label="Before"
+            tools:layout="@layout/fragment_before">
+
+        </fragment>
+        <action
+            android:id="@+id/action_global_start"
+            app:destination="@id/start" >
+            <argument
+                android:name="user"
+                app:argType="com.example.navargs.User"/>
+        </action>
+        <fragment
+            android:id="@+id/firstFragment"
+            android:name="com.seriousfolks.navargs.FirstFragment"
+            android:label="First">
+            <action
+                android:id="@+id/action_firstFragment_to_beforeFragment"
+                app:destination="@id/beforeFragment" />
+        </fragment>
+    </navigation>
+</navigation>
