@@ -21,7 +21,8 @@
             app:destination="@id/afterFragment" />
         <action
             android:id="@+id/action_start_to_navigation"
-            app:destination="@id/login_nav_graph" />
+            app:destination="@id/login_nav_graph"
+            app:popUpTo="@+id/nav_graph.xml" />
 
     </fragment>
     <fragment
