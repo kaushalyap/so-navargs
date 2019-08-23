@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
+    android:id="@+id/main_nav_graph.xml"
     app:startDestination="@id/start">
 
     <fragment
@@ -21,7 +21,8 @@
             app:destination="@id/afterFragment" />
         <action
             android:id="@+id/action_start_to_navigation"
-            app:destination="@id/login_nav_graph" />
+            app:destination="@id/login_nav_graph"
+            app:popUpTo="@+id/main_nav_graph.xml" />
 
     </fragment>
     <fragment
