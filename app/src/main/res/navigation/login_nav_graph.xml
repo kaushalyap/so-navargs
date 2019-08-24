@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/firstFragment"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/beforeFragment"
+        android:name="com.example.navargs.BeforeFragment"
+        android:label="Before"
+        tools:layout="@layout/fragment_before">
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_start"
+        app:destination="@id/start">
+        <argument
+            android:name="user"
+            app:argType="com.example.navargs.User" />
+    </action>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.navargs.FirstFragment"
+        android:label="First">
+        <action
+            android:id="@+id/action_firstFragment_to_beforeFragment"
+            app:destination="@id/beforeFragment" />
+    </fragment>
+</navigation>
