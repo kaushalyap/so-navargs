@@ -2,10 +2,8 @@ package com.example.navargs
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,8 +16,6 @@ class MainActivity : AppCompatActivity() {
     private fun initNav(){
 
         val navController = findNavController(R.id.nav_host_container)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-        findViewById<Toolbar>(R.id.toolbar)
-            .setupWithNavController(navController, appBarConfiguration)
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 }

@@ -15,6 +15,9 @@
             android:id="@+id/action_main_to_deviceListFragment"
             app:destination="@id/deviceListFragment" />
         <action
+            android:id="@+id/action_fragmentMain_to_newFragment"
+            app:destination="@id/newFragment" />
+        <action
             android:id="@+id/action_fragmentMain_to_pairing_nav_graph"
             app:destination="@id/pairing_nav_graph" />
 
@@ -28,6 +31,17 @@
             android:id="@+id/action_deviceListFragment_to_pairing_nav_graph"
             app:destination="@id/pairing_nav_graph" />
     </fragment>
+    <fragment
+        android:id="@+id/newFragment"
+        android:name="com.example.navargs.NewFragment"
+        android:label="New"
+        tools:layout="@layout/fragment_new">
+        <action
+            android:id="@+id/action_newFragment_to_pairing_nav_graph"
+            app:destination="@id/pairing_nav_graph" />
+    </fragment>
+
+    <!-- nested graph -->
     <navigation
         android:id="@+id/pairing_nav_graph"
         app:startDestination="@id/pairingFragment">
@@ -46,8 +60,8 @@
                 android:id="@+id/action_pairingFragment_to_enterCodeFragment"
                 app:destination="@id/enterCodeFragment" />
         </fragment>
+        <action
+            android:id="@+id/action_pairing_nav_graph_self"
+            app:popUpTo="@+id/pairing_nav_graph" />
     </navigation>
-    <action
-        android:id="@+id/action_global_deviceListFragment"
-        app:destination="@id/deviceListFragment" />
 </navigation>

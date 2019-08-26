@@ -25,12 +25,12 @@ class EnterCodeFragment : Fragment() {
         return rootView
     }
 
+
     private fun setClickListener(){
 
         rootView.findViewById<Button>(R.id.btn_done).setOnClickListener {
 
-
-            findNavController().navigate(R.id.action_global_deviceListFragment)
+            findNavController().navigate(R.id.action_pairing_nav_graph_self)
 
 
         }
