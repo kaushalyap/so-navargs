@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_main_to_deviceListFragment"
             app:destination="@id/deviceListFragment" />
+        <action
+            android:id="@+id/action_fragmentMain_to_pairing_nav_graph"
+            app:destination="@id/pairing_nav_graph" />
 
     </fragment>
     <fragment

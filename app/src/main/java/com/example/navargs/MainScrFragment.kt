@@ -31,5 +31,8 @@ class MainScrFragment : Fragment() {
         rootView.findViewById<Button>(R.id.btn_start).setOnClickListener {
             findNavController().navigate(R.id.action_main_to_deviceListFragment)
         }
+        rootView.findViewById<Button>(R.id.btn_quick_pairing).setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentMain_to_pairing_nav_graph)
+        }
     }
 }

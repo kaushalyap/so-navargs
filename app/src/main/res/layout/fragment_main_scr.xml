@@ -15,4 +15,11 @@
         android:textAlignment="center"
         android:textSize="36sp" />
 
+    <Button
+        android:id="@+id/btn_quick_pairing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick"
+        android:textAlignment="center"
+        android:textSize="36sp" />
 </FrameLayout>
