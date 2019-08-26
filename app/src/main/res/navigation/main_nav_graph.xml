@@ -49,9 +49,7 @@
             android:id="@+id/enterCodeFragment"
             android:name="com.example.navargs.EnterCodeFragment"
             android:label="Enter Code"
-            tools:layout="@layout/fragment_enter_code">
-
-        </fragment>
+            tools:layout="@layout/fragment_enter_code" />
         <fragment
             android:id="@+id/pairingFragment"
             android:name="com.example.navargs.PairingFragment"
