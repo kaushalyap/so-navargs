@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AfterFragment">
+    tools:context=".AFragment"
+    >
 
-    <TextView
+    <Button
+        android:id="@+id/btn_goto_b"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="After"
-        android:textSize="36sp"
+        android:layout_gravity="center"
+        android:text="Go to B"
         android:textAlignment="center"
-        android:layout_gravity="center"/>
+        android:textSize="36sp" />
 
 </FrameLayout>
